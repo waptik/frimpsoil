@@ -45,7 +45,9 @@ export const Footer = () => {
             </Text>
             <br />
             <Text>
-              Open Monday to Sunday +233(0)302 690 527 – available 24/7
+              Open Monday to Sunday
+              <br />
+              +233(0)302 690 527 – available 24/7
             </Text>
           </Stack>
 
@@ -91,7 +93,29 @@ export const Footer = () => {
         </Flex>
         <Text pt={6} fontSize={"sm"} textAlign={"center"}>
           Made on the Internet by{" "}
-          <Link href="https://twitter.com/_waptik">Stephane Mensah</Link>
+          <Link
+            color="twitter.500"
+            textDecoration="none"
+            href="https://twitter.com/_waptik?ref=https://frimpsoil.vercel.app"
+          >
+            Stephane Mensah
+          </Link>
+          . Powered by{" "}
+          <Link
+            color="gray.900"
+            textDecoration="none"
+            href="https://nextjs.org/?ref=https://frimpsoil.vercel.app"
+          >
+            Next.js
+          </Link>{" "}
+          +{" "}
+          <Link
+            textDecoration="none"
+            color="green.500"
+            href="https://chakra-ui.com/?ref=https://frimpsoil.vercel.app"
+          >
+            Chakra-UI
+          </Link>
         </Text>
       </Box>
     </Box>
