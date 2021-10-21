@@ -1,6 +1,6 @@
-# chi-app
+# FrimspOil
 
-🎉 Congratulations, your project was successfully bootstrapped with [Create Next Stack](https://github.com/akd-io/create-next-stack)!
+🎉 Congratulations, your project was successfully bootstrapped with [Create Next Stack](https://github.com/akd-io/create-next-stack)! See [demo](https://frimpsoil.vercel.app/) and [repo](https://github.com/waptik/frimpsoil)
 
 To get started, run:
 
