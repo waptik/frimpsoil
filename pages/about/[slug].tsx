@@ -1,7 +1,11 @@
-import AboutManagement from "@/components/About/Management";
-import Page from "@/components/Page";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { Component, ReactElement } from "react";
+import { ReactElement } from "react";
+
+import Page from "@/components/Page";
+import { AboutManagement, AboutStaff } from "@/components/About/Management";
+import AboutMissionsAndValues from "@/components/About/MissionsAndValues";
+import { Box } from "@chakra-ui/react";
+import Body from "@/components/Body";
 
 type PageProps = {
   slug: string;
@@ -15,18 +19,18 @@ const obj: {
   };
 } = {
   "mission-values": {
-    title: "Mission and Values",
+    title: "Our Mission and Values",
     description: "Mission and Core values of FrimpsOil",
-    component: <AboutManagement />,
+    component: <AboutMissionsAndValues />,
   },
   staff: {
-    title: "Management team",
-    description: "Management team of FrimpsOil",
-    component: <AboutManagement />,
+    title: "Meet our Staff",
+    description: "Staff team of FrimpsOil",
+    component: <AboutStaff />,
   },
   management: {
-    title: "Staff",
-    description: "Staff team of FrimpsOil",
+    title: "Meet our Management team",
+    description: "Management team of FrimpsOil",
     component: <AboutManagement />,
   },
 };
@@ -34,13 +38,9 @@ const obj: {
 const About: NextPage<PageProps> = ({ slug }) => {
   const { title, description, component } = obj[slug];
 
-  function renderAboutSection() {
-    return component;
-  }
-
   return (
     <Page title={title} description={description}>
-      {renderAboutSection()}
+      <Body title={obj[slug].title}>{component}</Body>
     </Page>
   );
 };

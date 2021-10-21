@@ -21,6 +21,10 @@ export const NAV_ITEMS: Array<NavItem> = [
     href: "/pas",
   },
   {
+    label: "Locations",
+    href: "/locations",
+  },
+  {
     label: "Contact Us",
     href: "/contact",
   },
