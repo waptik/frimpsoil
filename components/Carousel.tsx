@@ -36,66 +36,72 @@ export default function Carousel() {
   ];
 
   return (
-    <Box
-      position={"relative"}
-      height={"600px"}
-      width={"full"}
-      overflow={"hidden"}
-    >
-      {/* CSS files for react-slick */}
-      <link
-        rel="stylesheet"
-        type="text/css"
-        charSet="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
-      {/* Left Icon */}
-      <IconButton
-        aria-label="left-arrow"
-        colorScheme="messenger"
-        borderRadius="full"
-        position="absolute"
-        left={side}
-        top={top}
-        transform={"translate(0%, -50%)"}
-        zIndex={2}
-        onClick={() => slider?.slickPrev()}
+    <Box m={8}>
+      <Box
+        position={"relative"}
+        height={"600px"}
+        width={"full"}
+        overflow={"hidden"}
       >
-        <BiLeftArrowAlt />
-      </IconButton>
-      {/* Right Icon */}
-      <IconButton
-        aria-label="right-arrow"
-        colorScheme="messenger"
-        borderRadius="full"
-        position="absolute"
-        right={side}
-        top={top}
-        transform={"translate(0%, -50%)"}
-        zIndex={2}
-        onClick={() => slider?.slickNext()}
-      >
-        <BiRightArrowAlt />
-      </IconButton>
-      {/* Slider */}
-      <Slider {...settings} ref={(slider: any) => setSlider(slider)}>
-        {cards.map((url, index) => (
-          <Box
-            key={index}
-            height={"6xl"}
-            position="relative"
-            backgroundPosition="center"
-            backgroundRepeat="no-repeat"
-            backgroundSize="cover"
-            backgroundImage={`url(${url})`}
-          />
-        ))}
-      </Slider>
+        {/* CSS files for react-slick */}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+        {/* Left Icon */}
+        <IconButton
+          aria-label="left-arrow"
+          colorScheme="messenger"
+          borderRadius="full"
+          position="absolute"
+          left={side}
+          top={top}
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          onClick={() => slider?.slickPrev()}
+        >
+          <BiLeftArrowAlt />
+        </IconButton>
+        {/* Right Icon */}
+        <IconButton
+          aria-label="right-arrow"
+          colorScheme="messenger"
+          borderRadius="full"
+          position="absolute"
+          right={side}
+          top={top}
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          onClick={() => slider?.slickNext()}
+        >
+          <BiRightArrowAlt />
+        </IconButton>
+        {/* Slider */}
+        <Slider {...settings} ref={(slider: any) => setSlider(slider)}>
+          {cards.map((url, index) => (
+            <Box
+              key={index}
+              height={"6xl"}
+              position="relative"
+              backgroundPosition="center"
+              backgroundRepeat="no-repeat"
+              backgroundSize="cover"
+              backgroundImage={`url(${url})`}
+            >
+              <Box top={0} bottom={0}>
+                The Foundation
+              </Box>
+            </Box>
+          ))}
+        </Slider>
+      </Box>
     </Box>
   );
 }

@@ -4,7 +4,6 @@ import { ReactElement } from "react";
 import Page from "@/components/Page";
 import { AboutManagement, AboutStaff } from "@/components/About/Management";
 import AboutMissionsAndValues from "@/components/About/MissionsAndValues";
-import { Box } from "@chakra-ui/react";
 import Body from "@/components/Body";
 
 type PageProps = {

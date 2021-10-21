@@ -12,8 +12,8 @@ const ContentHeader: FC<BoxProps & { title?: string }> = ({ title }) => {
   return (
     <Box
       mx="auto"
-      w="1170px"
-      maxW="92%"
+      w={{ base: "full", md: "1170px" }}
+      maxW={{ base: "full", md: "92%" }}
       bgImage="url(/static/images/bg-tb.png)"
       bgSize="cover"
       bgColor="whiteAlpha.600"
@@ -50,7 +50,10 @@ const ContentHeader: FC<BoxProps & { title?: string }> = ({ title }) => {
   );
 };
 
-const Body: FC<BoxProps & { title?: string }> = ({ title, children }) => {
+export const Body: FC<BoxProps & { title?: string }> = ({
+  title,
+  children,
+}) => {
   return (
     <Box>
       {title && <ContentHeader title={title} />}
@@ -63,11 +66,38 @@ const Body: FC<BoxProps & { title?: string }> = ({ title, children }) => {
         spacing={{ base: 10, lg: 24 }}
         direction={{ base: "column", lg: "row" }}
         alignItems={"center"}
+        className="body-container"
       >
         <Stack spacing={12} mb={{ base: 12, lg: 0 }} flex={2}>
           {children}
         </Stack>
       </Stack>
+    </Box>
+  );
+};
+
+export const AltBody: FC<BoxProps & { title: string }> = ({
+  title,
+  children,
+}) => {
+  return (
+    <Box overflow="hidden" w="full">
+      <ContentHeader title={title} />
+
+      <Container maxW={"7xl"} flex={"1 0 auto"} py={8} mt={20}>
+        <Stack
+          direction={{ base: "column", lg: "row" }}
+          spacing={{ base: 0, lg: 8 }}
+        >
+          <Flex
+            direction={"column"}
+            w={"full"}
+            // maxW={{ lg: "calc(100% - 16rem)" }}
+          >
+            {children}
+          </Flex>
+        </Stack>
+      </Container>
     </Box>
   );
 };

@@ -60,7 +60,9 @@ export const BlogDate: React.FC<BlogDateProps> = (props) => {
 const News = ({ news }: { news: NewsProps[] }) => {
   return (
     <Container maxW={"7xl"} p="12">
-      <Heading as="h1">News & Stories of FrimpsOil</Heading>
+      <Heading as="h1" color="red.500" textAlign="center">
+        News & Stories about FrimpsOil
+      </Heading>
 
       <Divider marginTop="5" />
       <Wrap spacing="30px" marginTop="5">
@@ -116,7 +118,16 @@ const News = ({ news }: { news: NewsProps[] }) => {
             bg: "red.500",
           }}
         >
-          Read more news
+          <Link
+            target="_blank"
+            href="https://www.google.com/search?q=frimpsoil"
+            color="white"
+            _hover={{
+              textDecor: "none",
+            }}
+          >
+            Read more news
+          </Link>
         </Button>
       </Stack>
     </Container>
