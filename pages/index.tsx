@@ -1,4 +1,5 @@
 import Carousel from "@/components/Carousel";
+import Foundation from "@/components/Foundation";
 import { Hero } from "@/components/HomepageSections/Hero";
 import News from "@/components/News";
 import { NextPage } from "next";
@@ -40,6 +41,7 @@ const Index: NextPage = () => {
   return (
     <Page>
       <Hero locationsCount={69} />
+      <Foundation />
       <Carousel />
       <News news={news} />
     </Page>

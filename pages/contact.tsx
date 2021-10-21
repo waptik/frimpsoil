@@ -15,8 +15,8 @@ import {
   Button,
   useToast,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
-import { FieldValues, useForm, UseFormRegister } from "react-hook-form";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 interface InputFieldI {
   errors: {
@@ -199,7 +199,7 @@ const ContactPage = () => {
                 </Box>
               </Flex>
             </Box>
-            <Box bg="gray.900"></Box>
+            <Box bg="gray.300"></Box>
           </SimpleGrid>
         </Box>
       </AltBody>

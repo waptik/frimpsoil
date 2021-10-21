@@ -54,7 +54,7 @@ export const Footer = () => {
           <Stack align={"flex-start"}>
             <ListHeader>Social</ListHeader>
             {SOCIAL_LINKS.map((link) => (
-              <Link key={link.label} href={link.href}>
+              <Link key={link.label} href={link.href} target="_blank">
                 {link.label}
               </Link>
             ))}
@@ -62,8 +62,15 @@ export const Footer = () => {
 
           <Stack align={"flex-start"}>
             <ListHeader>Quick Links</ListHeader>
-            <Link href="/about/mvc">About us</Link>
-            <Link href="/contact">Contact us</Link>
+            <Link href="/about/mvc" target="_blank">
+              About us
+            </Link>
+            <Link href="http://www.thefrimpsfoundation.com/" target="_blank">
+              The Frimps Foundation
+            </Link>
+            <Link href="/contact" target="_blank">
+              Contact us
+            </Link>
           </Stack>
         </SimpleGrid>
       </Container>
@@ -96,6 +103,7 @@ export const Footer = () => {
           <Link
             color="twitter.500"
             textDecoration="none"
+            target="_blank"
             href="https://twitter.com/_waptik?ref=https://frimpsoil.vercel.app"
           >
             Stephane Mensah
@@ -104,6 +112,7 @@ export const Footer = () => {
           <Link
             color="gray.900"
             textDecoration="none"
+            target="_blank"
             href="https://nextjs.org/?ref=https://frimpsoil.vercel.app"
           >
             Next.js
@@ -112,6 +121,7 @@ export const Footer = () => {
           <Link
             textDecoration="none"
             color="green.500"
+            target="_blank"
             href="https://chakra-ui.com/?ref=https://frimpsoil.vercel.app"
           >
             Chakra-UI
